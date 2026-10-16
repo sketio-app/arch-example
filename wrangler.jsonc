@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "arch-example",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-20",
+  "observability": { "enabled": true },
+  // Notes on each board. The id is a placeholder: run `wrangler d1 create arch-example` and put yours here.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "arch-example",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // Photos attached to notes.
+  "r2_buckets": [{ "binding": "PHOTOS", "bucket_name": "arch-example-photos" }],
+  // One room per board, for live updates over WebSocket.
+  "durable_objects": {
+    "bindings": [{ "name": "ROOM", "class_name": "Room" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Room"] }],
+  // Sign-in sessions. The id is a placeholder: run `wrangler kv namespace create SESSIONS`.
+  "kv_namespaces": [{ "binding": "SESSIONS", "id": "00000000000000000000000000000000" }]
+}

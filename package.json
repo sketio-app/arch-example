@@ -1,0 +1,18 @@
+{
+  "name": "arch-example",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "hono": "4.13.9"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "5.20260925.1",
+    "typescript": "5.9.3",
+    "wrangler": "4.140.0"
+  }
+}
