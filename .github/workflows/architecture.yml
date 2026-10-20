@@ -10,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       # mode: analyze only reads the repository and writes the Artifact. Nothing is sent.
-      - uses: sketio-app/action@0abcd451c3f8b6e70854da40827bca353e6525a3 # v1.9.0
+      - uses: sketio-app/action@6f3889147007cc25b935f37194569b2080dfdcf9 # v1.10.0
